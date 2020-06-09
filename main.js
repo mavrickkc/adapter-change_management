@@ -126,7 +126,6 @@ function get(serviceNowTable, callback) {
     }
     return callback(callbackData, callbackError);
   });
-
 }
 
 
