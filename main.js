@@ -69,8 +69,8 @@ function get(serviceNowTable, callback) {
     uri: `/api/now/table/${serviceNowTable}?sysparm_limit=1`,
   };
 
-  /**
- * @function POST
+/**
+ * @function post
  * @description Call the ServiceNow POST API.
  *
  * @param {string} serviceNowTable - The table target of the ServiceNow table API.
@@ -79,9 +79,8 @@ function get(serviceNowTable, callback) {
  *   Will be HTML text if hibernating instance.
  * @param {error} callback.error - The error property of callback.
  */
-function get(serviceNowTable, callback) {
+function POST(serviceNowTable, callback) {
 
-  
   // Initialize return arguments for callback
   let callbackData = null;
   let callbackError = null;
@@ -93,7 +92,7 @@ function get(serviceNowTable, callback) {
   // Some properties are read from global const options.
   // Some properties are passed into function get() through parameters.
   const requestOptions = {
-    method: 'GET',
+    method: 'POST',
     auth: {
       user: options.username,
       pass: options.password,
@@ -126,6 +125,7 @@ function get(serviceNowTable, callback) {
     }
     return callback(callbackData, callbackError);
   });
+
 }
 
 
